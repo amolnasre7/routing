@@ -1,0 +1,25 @@
+
+<mat-toolbar color="#CC3333"> 
+  <mat-toolbar-row>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="bg-primary">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+  
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer mode="side" opened role="navigation">
+    <mat-nav-list>
+      <a mat-list-item routerLink='admin'><span class="glyphicon glyphicon-user"></span> ADMIN</a>
+      <a mat-list-item routerLink='create'><span class="glyphicon glyphicon-th-list	"></span>REGISTER </a>
+      <a mat-list-item routerLink='demo'><span class="glyphicon glyphicon-th-list	"></span> DEMO </a>
+      <a mat-list-item routerLink='employee'>LIST</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  
+  <!-- <mat-sidenav-content> -->
+    <router-outlet></router-outlet>
+  
+</mat-sidenav-container>
+

@@ -1,0 +1,20 @@
+<p>
+  demo works!
+</p>
+{{studentModel.value | json}}
+<form [formGroup]="studentModel">
+<div class="form-group" >
+Name:
+<input type="text" class="form-control" formControlName="Name">
+</div>
+<div  class="alert alert-danger" *ngIf="studentModel.controls['Name'].hasError('required')">
+   Name is Required
+  
+</div>
+<div class="form-group">
+  Roll No
+  <input type="text" class="form-control" formControlName="RollNo">
+  </div>
+<button type="submit" class="btn btn-primary" (click)="saveStudent(studentModel.value)">Submit</button>
+
+</form>
